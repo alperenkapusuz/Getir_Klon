@@ -49,17 +49,32 @@ export default function HeroSection() {
           <h4 className="text-primary-brand-color text-center font-semibold mb-4">
             Giriş yap veya kayıt ol
           </h4>
-          <div className="flex gap-x-2">
-            <ReactFlagsSelect
-              countries={Object.keys(phones)}
-              customLabels={phones}
-              onSelect={(code) => setSelected(code)}
-              selected={selected}
-              className="flag-select"
-            />
-            <div className="flex-1">
-                <input className="h-14 px-4 border-2 border-gray-200 rounded w-full transition-colors hover:border-primary-brand-color focus:border-primary-brand-color outline-none"/>
+          <div className="grid colgap-y-3">
+            <div className="flex gap-x-2">
+              <ReactFlagsSelect
+                countries={Object.keys(phones)}
+                customLabels={phones}
+                onSelect={(code) => setSelected(code)}
+                selected={selected}
+                className="flag-select"
+              />
+              <label className="flex-1 relative block">
+                <input
+                  required
+                  className="h-14 px-4 border-2 border-gray-200 rounded w-full transition-colors hover:border-primary-brand-color focus:border-primary-brand-color outline-none peer text-sm pt-2"
+                />
+                <span className="absolute top-0 left-0 h-full px-4 flex items-center text-sm text-gray-500 peer-focus:h-7 transition-all peer-focus:text-primary-brand-color peer-focus:text-xs peer-valid:h-7  peer-valid:text-primary-brand-color peer-valid:text-xs">
+                  Telefon Numarası
+                </span>
+              </label>
             </div>
+            <button className="bg-brand-yellow h-12 flex transition-colors hover:bg-primary-brand-color hover:text-brand-yellow items-center justify-center rounded-md w-full text-sm text-primary-brand-color">
+              Telefon numarası ile devam et
+            </button>
+            <hr className="h-[1px] bg-gray-300"/>
+            <button className="bg-blue-700 bg-opacity-10 h-12 flex text-opacity-80 transition-colors hover:bg-primary-brand-color hover:text-brand-yellow items-center justify-center rounded-md w-full text-sm text-primary-brand-color">
+              Facebook ile devam et
+            </button>
           </div>
         </div>
       </div>
