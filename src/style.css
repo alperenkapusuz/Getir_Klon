@@ -779,6 +779,10 @@ html, body {
   grid-template-columns: repeat(10, minmax(0, 1fr));
 }
 
+.grid-cols-8 {
+  grid-template-columns: repeat(8, minmax(0, 1fr));
+}
+
 .flex-col {
   flex-direction: column;
 }
@@ -795,6 +799,10 @@ html, body {
   justify-content: space-between;
 }
 
+.gap-1 {
+  gap: 0.25rem;
+}
+
 .gap-x-8 {
   -webkit-column-gap: 2rem;
           column-gap: 2rem;
@@ -807,6 +815,10 @@ html, body {
 
 .gap-y-2 {
   row-gap: 0.5rem;
+}
+
+.overflow-hidden {
+  overflow: hidden;
 }
 
 .whitespace-nowrap {
